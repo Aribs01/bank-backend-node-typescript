@@ -1,20 +1,22 @@
 import express from 'express';
 
 import UsersController from '../controllers/UsersController';
+import AccountController from '../controllers/AccountController';
+
 import auth from '../middlewares/auth';
 
 const routes = express.Router();
 
 const usersController = new UsersController();
+const accountController = new AccountController();
 
-// routes.post('/users/auth', usersController.auth);
-// routes.post('/users', usersController.store);
-// routes.get('/users', usersController.index);
-// routes.get('/users/:id', usersController.show);
+routes.route('/users/auth').post(usersController.login)
+routes.route('/users').get(usersController.getAllUsers).post(usersController.signup)
+routes.route('/users/:id').get(usersController.getUser)
 
-routes.route('/').get(usersController.index).post(usersController.auth).post(usersController.store)
-routes.route('/:id').get(usersController.show)
-
+// Authenticated routes
 routes.use(auth);
+
+routes.post('/wallet', accountController.addFunds);
 
 export default routes;

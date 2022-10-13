@@ -1,8 +1,8 @@
 export interface UsersInterface {
     id: number;
     email: string;
-    username: string;
     name: string;
     password: string;
+    balance: number;
     created_at: Date;
 }

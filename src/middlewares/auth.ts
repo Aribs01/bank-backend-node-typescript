@@ -1,18 +1,9 @@
-import {
-    Request,
-    Response,
-    NextFunction
-} from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 import jwt from 'jsonwebtoken';
-
 import dotenv from 'dotenv';
 
-interface TokenPayload {
-    id: string,
-    iat: number,
-    exp: number
-}
+import { TokenPayload } from '../models/Token';
 
 export default (req: Request, res: Response, next: NextFunction): Response | void => {
     const { authorization } = req.headers;
@@ -38,7 +29,7 @@ export default (req: Request, res: Response, next: NextFunction): Response | voi
 
         const { id } = data as TokenPayload;
 
-        req.user = id;
+        req.user = id; // help
 
         next();
     } catch {
