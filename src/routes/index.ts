@@ -11,11 +11,12 @@ const usersController = new UsersController();
 const accountController = new AccountController();
 
 routes.route('/users/auth').post(usersController.login)
-routes.route('/users').get(usersController.getAllUsers).post(usersController.signup)
-routes.route('/users/:id').get(usersController.getUser)
+routes.route('/users/signup').post(usersController.signup)
 
 // Authenticated routes
 routes.use(auth);
+routes.route('/users').get(usersController.getAllUsers)
+routes.route('/users/:id').get(usersController.getUser)
 
 routes.post('/wallet', accountController.addFunds);
 
