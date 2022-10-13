@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 
-const port: any = process.env.API_PORT || 3000;
+const port: any = process.env.PORT || 8080;
 
 app.use(express.json());
 
