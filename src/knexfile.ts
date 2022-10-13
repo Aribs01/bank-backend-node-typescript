@@ -39,7 +39,7 @@ export default {
         },
         migrations: {
             tableName: 'knex_migrations',
-            directory: path.join(path.dirname('./'), 'src', 'database', 'migrations')
+            directory: path.join(path.dirname('./'), 'src', 'db', 'migrations')
         }
     }
 };
