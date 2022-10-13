@@ -14,7 +14,9 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api/v1', routes)
+console.log("HERE");
 
-app.listen(port, () => {
-	console.log(`Server is running at ${port}...`);
+app.listen((port), function(){
+	console.log('kkk');
+	
 });
