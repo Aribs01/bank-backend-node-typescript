@@ -1,6 +1,6 @@
 # Bank Backend Using Node (Typescript)
 
-## A RESTful API made with [Node.js](https://nodejs.org/) - [TypeScript](https://www.typescriptlang.org/) - [MySQL](https://www.postgresql.org/) - [Express](http://expressjs.com/) - [Knex](http://knexjs.org/) - [JWT](https://jwt.io/)
+## A RESTful API made with [Node](https://nodejs.org/) - [TypeScript](https://www.typescriptlang.org/) - [MySQL](https://www.postgresql.org/) - [Express](http://expressjs.com/) - [Knex](http://knexjs.org/)
 <br>
 
 ## Main Features 👥 🏡
