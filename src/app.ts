@@ -7,16 +7,14 @@ dotenv.config();
 
 const app = express();
 
-const port: any = process.env.PORT || 8080;
+const port: any = process.env.PORT || 3000;
 
 app.use(express.json());
 
 app.use(cors());
 
 app.use('/api/v1', routes)
-console.log("HERE");
 
-app.listen((port), function(){
-	console.log('kkk');
-	
+app.listen(port, () => {
+	console.log(`Server is running at ${port}...`);
 });
